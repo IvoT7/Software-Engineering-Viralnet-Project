@@ -5,20 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-# Step 1: Debugging - This will list the real file structure
+# This command prints every file and folder in your project to the log
 - script: |
-    echo "--- Root directory contents ---"
-    ls -R
-  displayName: 'DEBUG: Show all files'
-
-# Step 2: Build Backend
-- script: |
-    npm install
-  displayName: 'Build Backend'
-  workingDirectory: 'backend' # I removed the subfolder prefix
-
-# Step 3: Build Frontend
-- script: |
-    npm install
-  displayName: 'Build Frontend'
-  workingDirectory: 'frontend' # I removed the subfolder prefix
+    echo "--- Listing everything in the repository ---"
+    find . -maxdepth 3 -not -path '*/.*'
+  displayName: 'DEBUG: Find my folders'
