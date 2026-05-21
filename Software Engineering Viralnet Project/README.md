@@ -7,6 +7,20 @@ This repository contains the source code, documentation, and development artifac
 - `/backend`: Core simulation engine and API services.
 - `/frontend`: User interface for simulation control and data visualization.
 
+# Project Team
+This document outlines the roles and responsibilities of the team members for the Viralnet Project.
+
+## Team Members
+
+| Name | Role | Responsibilities |
+| :--- | :--- | :--- |
+| [Name 1] | **Project Manager** | Coordination, timeline management, and final integration. |
+| [Name 2] | **Lead Backend Engineer** | API development, database logic, and error handling. |
+| [Name 3] | **DevOps Engineer** | Pipeline management, testing automation, and deployment. |
+| [Name 4] | **Frontend/UI Lead** | Static assets, UI design, and CSS/HTML structuring. |
+
+*Last Updated: May 2026*
+
 ## DevOps Lifecycle
 This project utilizes **Azure DevOps** to manage the full software development lifecycle:
 - **Boards**: Agile project management using User Stories, Tasks, and Test Cases.
