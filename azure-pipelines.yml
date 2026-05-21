@@ -5,22 +5,20 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-# Step 1: Debugging - This will list all files in the logs
+# Step 1: Debugging - This will list the real file structure
 - script: |
-    echo "Current working directory:"
-    pwd
-    echo "Listing all files in the current workspace:"
+    echo "--- Root directory contents ---"
     ls -R
-  displayName: 'DEBUG: List all files'
+  displayName: 'DEBUG: Show all files'
 
 # Step 2: Build Backend
 - script: |
     npm install
   displayName: 'Build Backend'
-  workingDirectory: 'Software Engineering Viralnet Project/backend'
+  workingDirectory: 'backend' # I removed the subfolder prefix
 
 # Step 3: Build Frontend
 - script: |
     npm install
   displayName: 'Build Frontend'
-  workingDirectory: 'Software Engineering Viralnet Project/frontend'
+  workingDirectory: 'frontend' # I removed the subfolder prefix
