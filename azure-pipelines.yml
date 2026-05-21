@@ -7,12 +7,14 @@ pool:
 steps:
 - script: |
     python -m pip install --upgrade pip
-    pip install -r requirements.txt
+    # Access the backend folder explicitly
+    pip install -r backend/requirements.txt
     pip install pytest
   displayName: 'Install Dependencies'
-  workingDirectory: 'Software Engineering Viralnet Project/backend'
 
 - script: |
+    # Move into the backend folder to avoid path/space issues
+    cd backend
+    # Run the specific test file
     python -m pytest test_calculator.py
   displayName: 'Run Unit Tests'
-  workingDirectory: 'Software Engineering Viralnet Project/backend'
