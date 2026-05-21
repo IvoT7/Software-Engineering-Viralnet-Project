@@ -14,10 +14,11 @@ This document outlines the roles and responsibilities of the team members for th
 
 | Name | Role | Responsibilities |
 | :--- | :--- | :--- |
-| [Name 1] | **Project Manager** | Coordination, timeline management, and final integration. |
-| [Name 2] | **Lead Backend Engineer** | API development, database logic, and error handling. |
-| [Name 3] | **DevOps Engineer** | Pipeline management, testing automation, and deployment. |
-| [Name 4] | **Frontend/UI Lead** | Static assets, UI design, and CSS/HTML structuring. |
+| [Ivo Sarzdoski Teovski] | **Software Lead** | Backend & SEIR Engine |
+| [Ognen Popovski] | **Scrum Master** | CI/CD & Server Reliability|
+| [Matej Dobrevski] | **Product Owner** | User Strategy & UX |
+| [Konstantin Pandilovski] | **Frontend/UI Lead** | Map Visualization |
+| [Iva Dabeska] | **QA Engineer** | Testing & Data Transparency |
 
 *Last Updated: May 2026*
 
