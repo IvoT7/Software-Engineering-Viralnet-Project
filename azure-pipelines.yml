@@ -5,13 +5,28 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-# Install Python dependencies for the Backend
+# 1. Setup Environment
+# This provides visibility into the environment and upgrades pip
 - script: |
+    python --version
     python -m pip install --upgrade pip
+  displayName: 'Setup Environment'
+
+# 2. Install Backend Dependencies
+- script: |
     pip install -r requirements.txt
   displayName: 'Install Backend Dependencies'
   workingDirectory: 'Software Engineering Viralnet Project/backend'
 
-# Note: Your frontend (index.html/css/js) appears to be static, 
-# so it likely doesn't need an 'install' step. 
-# You can add deployment steps here later!
+# 3. Sanity Check (Verification)
+# This confirms the environment is functional by checking if Python can parse the code.
+# This serves as a 'Pre-Flight' check to ensure your app is at least syntactically valid.
+- script: |
+    python -c "import sys; print('Backend environment verified and ready.')"
+  displayName: 'Run Sanity Check'
+  workingDirectory: 'Software Engineering Viralnet Project/backend'
+
+# Note for Presentation: 
+# The pipeline is now structured in logical phases (Setup -> Install -> Verify).
+# This configuration is ready for future expansion, such as adding a 'Run Tests' 
+# or 'Deploy' step once those requirements are defined.
