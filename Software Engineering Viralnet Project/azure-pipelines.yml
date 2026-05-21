@@ -1,0 +1,24 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildApp
+    steps:
+    # Build Backend
+    - script: |
+        cd backend
+        echo "Building Backend..."
+        # Add your actual build commands here, e.g., pip install -r requirements.txt
+      displayName: 'Build Backend'
+
+    # Build Frontend
+    - script: |
+        cd frontend
+        echo "Building Frontend..."
+        # Add your actual build commands here, e.g., npm install && npm run build
+      displayName: 'Build Frontend'

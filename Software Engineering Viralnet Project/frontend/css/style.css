@@ -1,0 +1,27 @@
+/* Hide the Leaflet attribution for a cleaner look */
+.leaflet-control-attribution {
+    display: none !important;
+}
+
+/* Make the zoom controls dark */
+.leaflet-bar a {
+    background-color: #1f2937 !important;
+    color: #e5e7eb !important;
+    border-color: #374151 !important;
+}
+
+.leaflet-bar a:hover {
+    background-color: #374151 !important;
+}
+
+/* Custom Webkit Scrollbar for sidebar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 3px;
+}
