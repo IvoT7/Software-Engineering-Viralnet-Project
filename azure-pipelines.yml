@@ -7,14 +7,12 @@ pool:
 steps:
 # Build the Backend
 - script: |
-    echo "Current directory is $(pwd)"
     npm install
   displayName: 'Build Backend'
   workingDirectory: 'Software Engineering Viralnet Project/backend'
 
 # Build the Frontend
 - script: |
-    echo "Current directory is $(pwd)"
     npm install
   displayName: 'Build Frontend'
   workingDirectory: 'Software Engineering Viralnet Project/frontend'
