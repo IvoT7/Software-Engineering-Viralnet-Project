@@ -1,11 +1,13 @@
 trigger:
 - main
 
+pr:
+- main
+
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
 - script: |
     python --version
     python -m pip install --upgrade pip
@@ -13,12 +15,16 @@ steps:
 
 - script: |
     pip install -r requirements.txt
+    pip install pytest
   displayName: 'Install Backend Dependencies'
   workingDirectory: 'Software Engineering Viralnet Project/backend'
 
+- script: |
+    pytest
+  displayName: 'Run Unit Tests'
+  workingDirectory: 'Software Engineering Viralnet Project/backend'
 
 - script: |
     python -c "import sys; print('Backend environment verified and ready.')"
   displayName: 'Run Sanity Check'
   workingDirectory: 'Software Engineering Viralnet Project/backend'
-
