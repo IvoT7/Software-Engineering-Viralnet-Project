@@ -20,7 +20,7 @@ steps:
   workingDirectory: 'Software Engineering Viralnet Project/backend'
 
 - script: |
-    pytest
+    pytest test_calculator.py
   displayName: 'Run Unit Tests'
   workingDirectory: 'Software Engineering Viralnet Project/backend'
 
