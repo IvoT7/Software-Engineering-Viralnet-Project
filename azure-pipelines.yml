@@ -5,8 +5,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-# This command prints every file and folder in your project to the log
+# Install Python dependencies for the Backend
 - script: |
-    echo "--- Listing everything in the repository ---"
-    find . -maxdepth 3 -not -path '*/.*'
-  displayName: 'DEBUG: Find my folders'
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install Backend Dependencies'
+  workingDirectory: 'Software Engineering Viralnet Project/backend'
+
+# Note: Your frontend (index.html/css/js) appears to be static, 
+# so it likely doesn't need an 'install' step. 
+# You can add deployment steps here later!
