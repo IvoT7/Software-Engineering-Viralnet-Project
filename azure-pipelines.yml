@@ -5,13 +5,21 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-# Build the Backend
+# Step 1: Debugging - This will list all files in the logs
+- script: |
+    echo "Current working directory:"
+    pwd
+    echo "Listing all files in the current workspace:"
+    ls -R
+  displayName: 'DEBUG: List all files'
+
+# Step 2: Build Backend
 - script: |
     npm install
   displayName: 'Build Backend'
   workingDirectory: 'Software Engineering Viralnet Project/backend'
 
-# Build the Frontend
+# Step 3: Build Frontend
 - script: |
     npm install
   displayName: 'Build Frontend'
